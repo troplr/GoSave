@@ -167,17 +167,4 @@ public class GoogleMaps {
         Double distance = jsonArr.getJSONObject(0).getJSONArray("elements").getJSONObject(0).getJSONObject("distance").getDouble("value");
         return distance;
 	}*/
-	
-	public static void main(String[] args) {
-		try {
-			String userAddr = "1600 Amphitheatre Parkway, Mountain View, CA";
-			ArrayList<String> result = GoogleMaps.findBest(userAddr, "Italian", 2);
-			System.out.println(result.get(0));
-			double avg = GoogleMaps.calcAvg(userAddr, "Chinese");
-			int pts = GoogleMaps.countPts(avg, Double.parseDouble(result.get(1)));
-			System.out.println(pts);
-		} catch (IOException | JSONException e) {
-			e.printStackTrace();
-		}
-	}
 }

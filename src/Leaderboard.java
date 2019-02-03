@@ -36,16 +36,4 @@ public class Leaderboard {
 		}
 	    Files.write(Paths.get(filename), jsonObject.toJSONString().getBytes());
 	}
-	
-	public static void main(String[] args) {
-		try {
-			Leaderboard.addUser("Calvin");
-			Leaderboard.addUser("Benny");
-			Leaderboard.updatePts("Calvin", 35);
-			Leaderboard.updatePts("Benny", -35);
-			Leaderboard.writeJSON("leaderboard.json");
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
 }
