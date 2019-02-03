@@ -29,15 +29,17 @@ app.layout = html.Div(children=[
             )
         ]),
         dcc.Tab(label='Your Savings', children=[
-            html.Div('Amount Saved', style={'font-weight': 'bold', 'fontSize': 40}),
+            html.Ul([
+                html.Div('Amount Saved', style={'font-weight': 'bold', 'fontSize': 40}),
 
-            html.Div('  Food', className='icon fa fa-utensils', style={'fontSize': 20, 'padding-bottom': 40}),
+                html.Div('  Food', className='icon fa fa-shopping-basket', style={'fontSize': 30, 'padding-top': 30, 'padding-bottom': 30, 'display': 'block'}),
 
-            html.Div('  Retails', className='icon fa fa-shopping-cart', style={'italic', 'fontSize': 20}),
+                html.Div('  Retails', className='icon fa fa-shopping-cart', style={'fontSize': 30, 'padding-top': 30, 'padding-bottom': 30, 'display': 'block'}),
 
-            html.Div('  Entertainment', className='icon fa fa-film', style={'italic', 'fontSize': 20}),
+                html.Div('  Entertainment', className='icon fa fa-film', style={'fontSize': 30, 'padding-top': 30, 'padding-bottom': 30, 'display': 'block'}),
 
-            html.Div('  Transportation', className='icon fa fa-subway',style={'italic', 'fontSize': 20})
+                html.Div('  Transportation', className='icon fa fa-subway',style={'fontSize': 30, 'padding-top': 30, 'padding-bottom': 30, 'display': 'block'})
+            ], style={'display': 'block'})
         ]),
         dcc.Tab(label='Leaderboard', children=[
                 dcc.Graph(
