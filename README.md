@@ -1,1 +1,1 @@
-# SavingsPro
+# minimalist
