@@ -3,33 +3,20 @@ public class Restaurant {
 	private int dollarSign;
 	private double distance;
 	private String name;
+	private double index;
 	
-	public Restaurant() {
-		
-	}
-
-	public int getDollarSign() {
-		return dollarSign;
-	}
-
-	public void setDollarSign(int dollarSign) {
-		this.dollarSign = dollarSign;
-	}
-
-	public double getDistance() {
-		return distance;
-	}
-
-	public void setDistance(double distance) {
+	public Restaurant(String name, double distance, int dollarSign) {
+		this.name = name;
 		this.distance = distance;
+		this.dollarSign = dollarSign;
+		index = (double) 30000 * (double) dollarSign + distance;
 	}
-
+	
+	public double getIndex() {
+		return index;
+	}
+	
 	public String getName() {
 		return name;
 	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-	
 }
